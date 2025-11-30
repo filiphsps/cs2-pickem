@@ -4,8 +4,8 @@ A modern TypeScript package for interacting with the CS2 Major Pick'em Challenge
 
 ## Packages
 
--   **@cs2-pickem/api** - Core API client library
--   **@cs2-pickem/cli** - Command-line interface tool
+-   [**@cs2-pickem/api** - Core API client library](/packages/api)
+-   [**@cs2-pickem/cli** - Command-line interface tool](/packages/cli)
 
 ## Quick Start
 
