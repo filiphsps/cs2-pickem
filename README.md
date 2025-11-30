@@ -84,4 +84,6 @@ pnpm lint
 
 ## License
 
+```
 MIT
+```
