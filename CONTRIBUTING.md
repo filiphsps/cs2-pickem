@@ -5,37 +5,37 @@ Thank you for your interest in contributing!
 ## Development Setup
 
 1. Clone the repository:
-\`\`\`bash
+```bash
 git clone https://github.com/yourorg/cs2-pickem.git
 cd cs2-pickem
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 pnpm install
-\`\`\`
+```
 
 3. Build all packages:
-\`\`\`bash
+```bash
 pnpm build
-\`\`\`
+```
 
 4. Run tests:
-\`\`\`bash
+```bash
 pnpm test
-\`\`\`
+```
 
 ## Commit Message Format
 
 We use [Conventional Commits](https://www.conventionalcommits.org/). All commits must follow this format:
 
-\`\`\`
+```
 <type>(<scope>): <description>
 
 [optional body]
 
 [optional footer]
-\`\`\`
+```
 
 ### Types
 
@@ -62,13 +62,13 @@ We use [Conventional Commits](https://www.conventionalcommits.org/). All commits
 
 ### Examples
 
-\`\`\`bash
+```bash
 feat(api): add bracket scoring utility
 fix(cli): handle missing config file gracefully
 docs(api): add browser usage examples
 test(endpoints): add predictions endpoint tests
 chore(deps): update effect to v3.11
-\`\`\`
+```
 
 ## Pull Request Process
 
@@ -83,7 +83,7 @@ chore(deps): update effect to v3.11
 
 We use [Biome](https://biomejs.dev/) for linting and formatting. Run:
 
-\`\`\`bash
+```bash
 # Check for issues
 pnpm lint
 
@@ -92,7 +92,7 @@ pnpm lint:fix
 
 # Format code
 pnpm format
-\`\`\`
+```
 
 ## Testing
 
@@ -103,4 +103,4 @@ pnpm format
 ## Questions?
 
 Open an issue or start a discussion on GitHub.
-\`\`\`
+```
