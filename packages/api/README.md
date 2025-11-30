@@ -4,13 +4,13 @@ TypeScript client for the CS2 Major Pick'em Challenge API. Uses Effect-TS intern
 
 ## Installation
 
-\`\`\`bash
+```bash
 npm install @cs2-pickem/api
-\`\`\`
+```
 
 ## Quick Start
 
-\`\`\`typescript
+```typescript
 import { createPickEmClient } from "@cs2-pickem/api"
 
 const client = createPickEmClient({ 
@@ -26,7 +26,7 @@ const predictions = await client.getPredictions({
   steamId: "76561198XXXXXXXX",
   authCode: "AAAA-AAAAA-AAAA"
 })
-\`\`\`
+```
 
 ## API Reference
 
@@ -34,12 +34,12 @@ const predictions = await client.getPredictions({
 
 Creates a new Pick'em API client.
 
-\`\`\`typescript
+```typescript
 const client = createPickEmClient({
   apiKey: "your-steam-api-key",
   baseUrl: "https://api.steampowered.com" // optional
 })
-\`\`\`
+```
 
 ### client.getTournamentLayout(eventId)
 
@@ -75,7 +75,7 @@ Generate Steam Market URL for sticker purchases.
 
 ## Error Handling
 
-\`\`\`typescript
+```typescript
 import { 
   PickEmGoneError, 
   PickEmPreconditionError,
@@ -93,24 +93,24 @@ try {
     console.error("Rate limited, retry after:", error.retryAfter)
   }
 }
-\`\`\`
+```
 
 ## Utilities
 
 ### Bracket Scoring
 
-\`\`\`typescript
+```typescript
 import { calculateBracketScore, getCoinTier } from "@cs2-pickem/api"
 
 const score = calculateBracketScore(layout, predictions)
 const tier = getCoinTier(score.totalPoints)
 
 console.log(\`Points: \${score.totalPoints}, Tier: \${tier}\`)
-\`\`\`
+```
 
 ### Market URLs
 
-\`\`\`typescript
+```typescript
 import { buildMarketUrl } from "@cs2-pickem/api"
 
 const url = buildMarketUrl({
@@ -118,21 +118,21 @@ const url = buildMarketUrl({
   teamId: 57,
   tournamentId: 25
 })
-\`\`\`
+```
 
 ## Browser Usage
 
 This package works in browsers with native fetch support:
 
-\`\`\`typescript
+```typescript
 import { createPickEmClient } from "@cs2-pickem/api"
 
 const client = createPickEmClient({
   apiKey: import.meta.env.VITE_STEAM_API_KEY
 })
-\`\`\`
+```
 
 ## License
 
 MIT
-\`\`\`
+```
