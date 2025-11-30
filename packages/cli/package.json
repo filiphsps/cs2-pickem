@@ -1,6 +1,6 @@
 {
     "name": "@cs2-pickem/cli",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "type": "module",
     "description": "CLI tool to manage CS2 Major Pick'em predictions",
     "bin": {
