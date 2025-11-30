@@ -14,18 +14,21 @@ jobs:
 
       - uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 10
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'pnpm'
+          node-version: 24
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Lint
         run: pnpm lint
+
+      - name: Build
+        run: pnpm build
 
       - name: Type check
         run: pnpm -r typecheck
@@ -33,11 +36,8 @@ jobs:
       - name: Test
         run: pnpm test
 
-      - name: Build
-        run: pnpm build
-
       - name: Upload coverage
         uses: codecov/codecov-action@v4
         with:
-          files: ./packages/api/coverage/lcov.info
+          files: ./packages/api/coverage/lcov.info,./packages/cli/coverage/lcov.info
           fail_ci_if_error: false

@@ -6,12 +6,12 @@ on:
       - main
       - master
     paths:
-      - 'packages/cli/**'
+      - "packages/cli/**"
 
 permissions:
   contents: write
   pull-requests: write
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
 
 jobs:
   release-please:
@@ -22,7 +22,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: '@cs2-pickem/cli'
           path: packages/cli
 
       - uses: actions/checkout@v4
@@ -31,18 +30,18 @@ jobs:
       - uses: pnpm/action-setup@v3
         if: ${{ steps.release.outputs.release_created }}
         with:
-          version: 8
+          version: 10
 
       - uses: actions/setup-node@v4
         if: ${{ steps.release.outputs.release_created }}
         with:
-          node-version: 20
-          cache: 'pnpm'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 24
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         if: ${{ steps.release.outputs.release_created }}
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build API dependency
         if: ${{ steps.release.outputs.release_created }}

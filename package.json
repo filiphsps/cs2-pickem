@@ -1,31 +1,36 @@
 {
-	"name": "@cs2-pickem/monorepo",
-	"private": "true",
-	"version": "0.0.0",
-	"type": "module",
-	"description": "TypeScript client for CS2 Major Pick'em Challenge API",
-	"scripts": {
-		"build": "pnpm -r run build",
-		"test": "pnpm -r test",
-		"test:coverage": "pnpm -r run test:coverage",
-		"typecheck": "pnpm -r typecheck",
-		"lint": "pnpm -r lint"
-	},
-	"keywords": [
-		"cs2",
-		"counter-strike",
-		"pickem",
-		"major",
-		"steam",
-		"api",
-		"esports"
-	],
-	"workspaces": ["packages/*"],
-	"dependencies": {},
-	"devDependencies": {
-		"@types/node": "^20.0.0",
-		"typescript": "^5.6.0",
-		"release-please": "^17.1.0"
-	},
-	"engines": { "node": ">=18" }
+    "name": "@cs2-pickem/monorepo",
+    "private": "true",
+    "version": "0.0.0",
+    "type": "module",
+    "description": "TypeScript client for CS2 Major Pick'em Challenge API",
+    "scripts": {
+        "build": "pnpm -r run build",
+        "test": "pnpm -r test",
+        "typecheck": "pnpm -r typecheck",
+        "lint": "pnpm exec biome check",
+        "format": "pnpm exec biome check --write"
+    },
+    "keywords": [
+        "cs2",
+        "counter-strike",
+        "pickem",
+        "major",
+        "steam",
+        "api",
+        "esports"
+    ],
+    "workspaces": [
+        "packages/*"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.6.0",
+        "release-please": "^17.1.0",
+        "@biomejs/biome": "2.3.8"
+    },
+    "engines": {
+        "node": ">=18"
+    }
 }

@@ -1,15 +1,15 @@
 {
-  "packages": {
-    "packages/api": {
-      "release-type": "node",
-      "package-name": "@cs2-pickem/api",
-      "changelog-path": "CHANGELOG.md"
-    },
-    "packages/cli": {
-      "release-type": "node",
-      "package-name": "@cs2-pickem/cli",
-      "changelog-path": "CHANGELOG.md"
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+    "packages": {
+        "packages/api": {
+            "release-type": "node",
+            "package-name": "@cs2-pickem/api",
+            "changelog-path": "CHANGELOG.md"
+        },
+        "packages/cli": {
+            "release-type": "node",
+            "package-name": "@cs2-pickem/cli",
+            "changelog-path": "CHANGELOG.md"
+        }
     }
-  },
-  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }

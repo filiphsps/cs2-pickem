@@ -1,45 +1,54 @@
 {
-  "name": "@cs2-pickem/api",
-  "version": "0.0.1",
-  "type": "module",
-  "description": "TypeScript client for CS2 Major Pick'em Challenge API",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+    "name": "@cs2-pickem/api",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "TypeScript client for CS2 Major Pick'em Challenge API",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./utils/bracket": {
+            "import": "./dist/utils/bracket.js",
+            "types": "./dist/utils/bracket.d.ts"
+        },
+        "./utils/market": {
+            "import": "./dist/utils/market.js",
+            "types": "./dist/utils/market.d.ts"
+        }
     },
-    "./utils/bracket": {
-      "import": "./dist/utils/bracket.js",
-      "types": "./dist/utils/bracket.d.ts"
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest run --coverage --pass-with-no-tests",
+        "typecheck": "tsc --noEmit"
     },
-    "./utils/market": {
-      "import": "./dist/utils/market.js",
-      "types": "./dist/utils/market.d.ts"
+    "keywords": [
+        "cs2",
+        "counter-strike",
+        "pickem",
+        "major",
+        "steam",
+        "api",
+        "esports"
+    ],
+    "dependencies": {
+        "effect": "^3.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@vitest/coverage-v8": "^2.1.0",
+        "typescript": "^5.6.0",
+        "vitest": "^2.1.0"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "publishConfig": {
+        "access": "public"
     }
-  },
-  "files": ["dist"],
-  "scripts": {
-    "build": "tsc",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
-    "typecheck": "tsc --noEmit"
-  },
-  "keywords": ["cs2", "counter-strike", "pickem", "major", "steam", "api", "esports"],
-  "dependencies": {
-    "effect": "^3.10.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.6.0",
-    "vitest": "^2.1.0",
-    "@vitest/coverage-v8": "^2.1.0"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
 }

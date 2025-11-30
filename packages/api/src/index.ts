@@ -1,53 +1,52 @@
 // Main client export
-export { createPickEmClient } from "./client.js"
-export type { PickEmClient } from "./client.js"
 
-// Types
-export type {
-  ClientConfig,
-  UserAuthParams,
-  TournamentLayout,
-  TournamentSection,
-  MatchGroup,
-  Team,
-  Pick,
-  UserPredictions,
-  Prediction,
-  UploadPredictionParams,
-  UploadMultipleParams,
-  UploadResult,
-  FantasyLineup,
-  FantasyTeam,
-  UploadLineupParams,
-  TournamentItems,
-  TournamentItem,
-  MarketUrlParams,
-} from "./types.js"
-
+export type { PickEmClient } from "./client.js";
+export { createPickEmClient, enrichLayout } from "./client.js";
 // User-facing errors
 export {
-  PickEmError,
-  PickEmValidationError,
-  PickEmRateLimitError,
-  PickEmPreconditionError,
-  PickEmConflictError,
-  PickEmGoneError,
-} from "./errors.js"
-
+    PickEmConflictError,
+    PickEmError,
+    PickEmGoneError,
+    PickEmPreconditionError,
+    PickEmRateLimitError,
+    PickEmValidationError,
+} from "./errors.js";
+// Types
+export type {
+    ClientConfig,
+    FantasyLineup,
+    FantasyTeam,
+    MarketUrlParams,
+    MatchGroup,
+    Pick,
+    Prediction,
+    Team,
+    TournamentItem,
+    TournamentItems,
+    TournamentLayout,
+    TournamentSection,
+    UploadLineupParams,
+    UploadMultipleParams,
+    UploadPredictionParams,
+    UploadResult,
+    UserAuthParams,
+    UserPredictions,
+} from "./types.js";
+export type { BracketScore, CoinTier, SectionScore } from "./utils/bracket.js";
+export {
+    calculateBracketScore,
+    getAccuracyPercentage,
+    getCoinTier,
+    getPointsToNextTier,
+} from "./utils/bracket.js";
+export { buildMarketUrl, getTournamentName, registerTournament } from "./utils/market.js";
 // Utilities
-export { buildMarketUrl, getTournamentName, registerTournament } from "./utils/market.js"
+export { teamNameMap } from "./utils/teams.js";
 export {
-  calculateBracketScore,
-  getCoinTier,
-  getPointsToNextTier,
-  getAccuracyPercentage,
-} from "./utils/bracket.js"
-export type { BracketScore, SectionScore, CoinTier } from "./utils/bracket.js"
-export {
-  validateSteamId,
-  validateAuthCode,
-  validateEventId,
-  validateUserAuthParams,
-  validateUploadPredictionParams,
-  validateUploadLineupParams,
-} from "./utils/validation.js"
+    validateAuthCode,
+    validateEventId,
+    validateSteamId,
+    validateUploadLineupParams,
+    validateUploadPredictionParams,
+    validateUserAuthParams,
+} from "./utils/validation.js";
