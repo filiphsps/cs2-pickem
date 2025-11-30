@@ -4,21 +4,21 @@ A modern TypeScript package for interacting with the CS2 Major Pick'em Challenge
 
 ## Packages
 
-- **@cs2-pickem/api** - Core API client library
-- **@cs2-pickem/cli** - Command-line interface tool
+-   **@cs2-pickem/api** - Core API client library
+-   **@cs2-pickem/cli** - Command-line interface tool
 
 ## Quick Start
 
 ### API Package
 
-\`\`\`bash
+```bash
 npm install @cs2-pickem/api
-\`\`\`
+```
 
-\`\`\`typescript
+```typescript
 import { createPickEmClient } from "@cs2-pickem/api"
 
-const client = createPickEmClient({ 
+const client = createPickEmClient({
   apiKey: "your-steam-api-key"
 })
 
@@ -43,11 +43,11 @@ await client.uploadPrediction({
   pickId: 57,
   itemId: "429500386"
 })
-\`\`\`
+```
 
 ### CLI Tool
 
-\`\`\`bash
+```bash
 npm install -g @cs2-pickem/cli
 
 # Configure credentials
@@ -64,11 +64,11 @@ cs2-pickem predict 25 --interactive
 
 # Check your score
 cs2-pickem score 25
-\`\`\`
+```
 
 ## Development
 
-\`\`\`bash
+```bash
 # Install dependencies
 pnpm install
 
@@ -80,7 +80,7 @@ pnpm test
 
 # Lint
 pnpm lint
-\`\`\`
+```
 
 ## License
 
