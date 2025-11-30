@@ -1,0 +1,26 @@
+{
+	"name": "@cs2-pickem/monorepo",
+	"private": "true",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "TypeScript client for CS2 Major Pick'em Challenge API",
+	"scripts": {},
+	"keywords": [
+		"cs2",
+		"counter-strike",
+		"pickem",
+		"major",
+		"steam",
+		"api",
+		"esports"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"typescript": "^5.6.0",
+		"release-please": "^17.1.0"
+	},
+	"engines": {
+		"node": ">=18"
+	}
+}
