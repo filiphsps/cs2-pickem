@@ -6,7 +6,7 @@ Thank you for your interest in contributing!
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourorg/cs2-pickem.git
+git clone https://github.com/filiphsps/cs2-pickem.git
 cd cs2-pickem
 ```
 
@@ -30,7 +30,7 @@ pnpm test
 We use [Conventional Commits](https://www.conventionalcommits.org/). All commits must follow this format:
 
 ```
-<type>(<scope>): <description>
+<type>(<scope>): <description>.
 
 [optional body]
 
