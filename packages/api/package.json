@@ -1,6 +1,6 @@
 {
     "name": "@cs2-pickem/api",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "type": "module",
     "description": "TypeScript client for CS2 Major Pick'em Challenge API",
     "main": "./dist/index.js",
